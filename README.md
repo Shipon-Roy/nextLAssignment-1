@@ -20,34 +20,29 @@ interfaces এবং types দুটিই ডেটার গঠন নির�
   Interfaces:টাইপ কম্পাইল করার চেয়ে দ্রুত কম্পাইল হয়।
   Type:টাইপ কম্পাইল করতে interfaces এর চেয়ে বেসি টাইম নেয়।
 
-ts``
-example
+```ts
+example;
 
 interface Person {
-name: string;
-age: number;
+  name: string;
+  age: number;
 }
 
 type User = string | number;
-
-``ts
+```
 
 ## 2. What is the use of the keyof keyword in TypeScript? Provide an example.
 
 keyof keyword ব্যবহার করা হয় কোন অবজেক্ট টাইপের সমস্ত key এর union টাইপ বের করার জন্য । অর্থাৎ কোনো interface বা টাইপ এর প্রোপার্টিগুলোর নাম গুলোকে একটি টাইপে পাওয়া যায়।
 
-ts```
-Ex:
-interface User {
-id: number;
-name: string;
-email: string;
+```ts
+Ex: interface User {
+  id: number;
+  name: string;
+  email: string;
 }
 
 type UserValue = keyof User;
 
-uservalue : "id" | "name" | "email"
-
-```ts
-
+Uservalue: "id" | "name" | "email";
 ```
